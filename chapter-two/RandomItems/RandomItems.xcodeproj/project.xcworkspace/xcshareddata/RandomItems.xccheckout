@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>911E74D5-E84D-4FC1-9BBB-6CF9A4298406</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RandomItems</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E823D19C88AD0DE4D24E8A83F092DD35C36F7AD</key>
+		<string>https://github.com/JulianMayorga/ios-programming-exercises.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>chapter-two/RandomItems/RandomItems.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E823D19C88AD0DE4D24E8A83F092DD35C36F7AD</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JulianMayorga/ios-programming-exercises.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E823D19C88AD0DE4D24E8A83F092DD35C36F7AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E823D19C88AD0DE4D24E8A83F092DD35C36F7AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>big-nerd-ranch-ios-practice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
