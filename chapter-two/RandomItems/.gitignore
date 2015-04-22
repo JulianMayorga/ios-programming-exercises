@@ -1,5 +1,8 @@
 # Xcode
 #
+.DS_Store
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata
 build/
 *.pbxuser
 !default.pbxuser
