@@ -15,7 +15,7 @@
 
     if (self) {
         _subItems = items;
-        _itemName = @"Container";
+        self.itemName = @"Container";
     }
 
     return self;

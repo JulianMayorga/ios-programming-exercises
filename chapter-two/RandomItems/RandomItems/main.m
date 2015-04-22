@@ -15,14 +15,20 @@ int main(int argc, const char * argv[]) {
         // Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc] init];
 
-        for (int i = 0; i < 10; i++) {
-            BNRItem *item = [BNRItem randomItem];
-            [items addObject:item];
-        }
+        BNRItem *backpack = [[BNRItem alloc] initWithItemName:@"Backpack"];
+        [items addObject:backpack];
 
-        BNRItemContainer *itemContainer = [[BNRItemContainer alloc] initWithSubItems:items];
+        BNRItem *calculator = [[BNRItem alloc] initWithItemName:@"Calculator"];
+        [items addObject:calculator];
 
-        NSLog(@"%@", itemContainer);
+        backpack.containedItem = calculator;
+
+        backpack = nil;
+        calculator = nil;
+
+        // Gold challenge
+        // BNRItemContainer *itemContainer = [[BNRItemContainer alloc] initWithSubItems:items];
+        // NSLog(@"%@", itemContainer);
 
         // Bronze challenge
         // NSLog(@"%@", items[11]);
@@ -31,8 +37,9 @@ int main(int argc, const char * argv[]) {
         // reason: '*** -[__NSArrayM objectAtIndex:]: index 11 beyond bounds [0 .. 9]'
 
         // Destroy the mutable array
+        NSLog(@"Setting items to nil...");
         items = nil;
-        itemContainer = nil;
+        //itemContainer = nil;
     }
     return 0;
 }
