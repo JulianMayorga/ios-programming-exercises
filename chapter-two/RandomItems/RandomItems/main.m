@@ -19,6 +19,12 @@ int main(int argc, const char * argv[]) {
             [items addObject:item];
         }
         
+        // Bronze challenge
+        // NSLog(@"%@", items[11]);
+        //
+        // Exception: Terminating app due to uncaught exception 'NSRangeException',
+        // reason: '*** -[__NSArrayM objectAtIndex:]: index 11 beyond bounds [0 .. 9]'
+
         for (BNRItem *item in items) {
             NSLog(@"%@", item);
         }
