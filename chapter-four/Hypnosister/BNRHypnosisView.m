@@ -25,8 +25,10 @@
 - (void)drawRect:(CGRect)rect {
     CGRect bounds = self.bounds;
     UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:logoImage];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
 
-    [logoImage drawInRect:bounds];
+    [self.window addSubview:imageView];
 
     // Figure out the center of the bounds rectangle
     CGPoint center;
