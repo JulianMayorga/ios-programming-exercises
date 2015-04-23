@@ -24,11 +24,6 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     CGRect bounds = self.bounds;
-    UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:logoImage];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-
-    [self.window addSubview:imageView];
 
     // Figure out the center of the bounds rectangle
     CGPoint center;
@@ -53,6 +48,23 @@
 
     // Draw the line!
     [path stroke];
+
+    // Gold challenge
+    UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
+
+    // Image container that's smaller than the device's screen
+    CGRect imageRect = CGRectMake(bounds.origin.x + 60, bounds.origin.y + 60, bounds.size.width / 1.5, bounds.size.height / 1.5);
+
+    // Enable shadow in context
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(currentContext);
+    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+
+    // Draw image with shadow
+    [logoImage drawInRect:imageRect];
+
+    // Disable shadow
+    CGContextRestoreGState(currentContext);
 }
 
 @end
