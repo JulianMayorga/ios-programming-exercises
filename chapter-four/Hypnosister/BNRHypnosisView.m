@@ -24,6 +24,9 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     CGRect bounds = self.bounds;
+    UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
+
+    [logoImage drawInRect:bounds];
 
     // Figure out the center of the bounds rectangle
     CGPoint center;
