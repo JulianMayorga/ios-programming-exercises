@@ -11,6 +11,25 @@
 
 @implementation BNRHypnosisViewController
 
+
+- (void)segmentAction:(UISegmentedControl *)segment {
+    BNRHypnosisView *view = self.view;
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            view.circleColor = [UIColor redColor];
+            break;
+        case 1:
+            view.circleColor = [UIColor greenColor];
+            break;
+        case 2:
+            view.circleColor = [UIColor blueColor];
+            break;
+
+        default:
+            break;
+    }
+}
+
 - (void)loadView {
     // Create a view
     BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] init];
@@ -22,6 +41,14 @@
 - (void)viewDidLoad {
     // Always call the super implementation of viewDidLoad
     [super viewDidLoad];
+
+
+    NSArray *colors = @[@"Red", @"Green", @"Blue"];
+    UISegmentedControl *colorControl = [[UISegmentedControl alloc] initWithItems:colors];
+    colorControl.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 50);
+    [colorControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:colorControl];
+
     NSLog(@"BNRHypnosisViewController loaded its view.  ");
 }
 
